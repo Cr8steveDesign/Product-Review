@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    /*PRIMARY COLORS*/
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* NEUTRAL COLORS*/
+    --veryDarkBlue: hsl(212, 21%, 14%); 
+    --darkGBlue: hsl(228, 12%, 48%); 
+    --white: hsl(0, 0%, 100%)
+}
+
+* {
+    box-sizing: border-box; 
+    /* background-color: red;  */
+}
+   
+body {
+    width: 100vw; 
+    height: 100vh; 
+    min-height: 100vh; 
+    margin: 0; 
+    padding: 0; 
+    background-color: var(--cream);
+    font-family: 'Montserrat', 'sans-serif';
+    padding: 0.8rem; 
+}
+
+.sub-p {
+    margin-top: -0.5rem; 
+    margin-bottom: -0.5rem; 
+    letter-spacing: 0.2rem; 
+    
+}
+
+body h1 {
+    font-family: 'Fraunces', 'sans-serif'; 
+    font-weight: 700; 
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 0.4rem;  
+}
+
+body h2 {
+    font-family: 'Fraunces', 'sans-serif';
+    font-size: 2rem; 
+    color: var(--dark-cyan);
+}
+
+h2 > span {
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 0.7rem;
+    font-weight: normal;
+    text-decoration:line-through;
+    vertical-align: middle;
+    padding-bottom: 0.4rem;
+    color: var(--darkGBlue);
+    margin-left: 0.5rem; 
+    margin-top:-4rem;
+    
+}
+
+p {
+    color: var(--darkGBlue);
+    line-height: 1.5rem; 
+    font-size: 0.87rem; 
+    
+}
+
+main {
+    width: 90vw;
+    height: max-content;  
+    /* min-height: calc(maxcontent + 3rem); */
+    margin: 0  auto; 
+    background-color: white; 
+    overflow: hidden; 
+    border-radius: 1rem;
+     
+}
+
+.img-holder {
+    width: 100%;
+    object-fit: cover; 
+    
+}
+
+/* I HAD TO COPY THE IMAGES TO THE SAME PATH AS THE CSS FILE (THE CSS FOLDERAS I WAS HAVING PROBLEMS GETTING THE RIGHT PATH  THE TECHNIQUE IMPLEMENTED HERE IS TO ENABLE THE CONTENT/IMAGE TYPE CHANGE BASED ON THE SCREEN SIZE - WE WOULDN'T WANT AN OVERLY LARGE IMAGE ON A MOBILE WHICH WILL AFFECT LOAD TIME*/
+.perfume {
+    width: 100%;
+    object-fit: cover;
+    content:url("image-product-mobile.jpg")
+    
+}
+
+.textholder {
+    padding: 1.5rem; 
+}
+
+button {
+    display: block; 
+    box-sizing: border-box; 
+    text-align: center; 
+    margin-top: -1rem; 
+    width: 100%; 
+    background-color: var(--dark-cyan);
+    border: none; 
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 1rem; 
+    font-weight: 600; 
+    color: white; 
+    padding: 1rem; 
+    border-radius: 0.5rem;  
+
+}
+
+form {
+    margin-bottom: none; 
+}
+
+footer {
+    margin-top: 1rem; 
+    font-size: 11px;
+    text-align: center;
+  }
+   a {
+    color: hsl(228, 45%, 44%);
+  }
+    
+
+  
+/*MEDIA QUERY FOR BIG SCREENS START HERE*/
+@media screen and (min-width: 600px) {
+body {
+    width: 100vw; 
+    height: 100vh; 
+    min-height: 100vh; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    background-color: var(--cream);
+    font-family: 'Montserrat', 'sans-serif';
+    padding: 0.8rem; 
+}
+
+.sub-p {
+    margin-top: -0.5rem; 
+    margin-bottom: -0.5rem; 
+    letter-spacing: 0.2rem; 
+    
+}
+
+body h1 {
+    font-family: 'Fraunces', 'sans-serif'; 
+    font-weight: 700; 
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 0.4rem;  
+}
+
+body h2 {
+    font-family: 'Fraunces', 'sans-serif';
+    font-size: 2rem; 
+    color: var(--dark-cyan);
+}
+
+h2 > span {
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 0.7rem;
+    font-weight: normal;
+    text-decoration:line-through;
+    vertical-align: middle;
+    padding-bottom: 0.4rem;
+    color: var(--darkGBlue);
+    margin-left: 0.5rem; 
+    margin-top:-4rem;
+    
+}
+
+p {
+    color: var(--darkGBlue);
+    line-height: 1.5rem; 
+    font-size: 0.87rem; 
+    
+}
+
+main {
+    width: 41.1rem;
+    display: flex;   
+    flex-direction: row; 
+    justify-content: center; 
+    padding-top: 5vh; 
+    margin: auto;
+    background-color: unset; 
+    overflow: hidden; 
+    border-radius: 1rem;
+     
+}
+
+.img-holder {
+    width: 0;
+    object-fit: cover; 
+    flex: 1 1 0; 
+    height: max-content; 
+    overflow: hidden; 
+    background-color: var(--white);
+    padding: 0; 
+    margin: 0; 
+    border-radius: 1rem 0 0 1rem; 
+
+}
+
+/* I HAD TO COPY THE IMAGES TO THE SAME PATH AS THE CSS FILE (THE CSS FOLDERAS I WAS HAVING PROBLEMS GETTING THE RIGHT PATH  THE TECHNIQUE IMPLEMENTED HERE IS TO ENABLE THE CONTENT/IMAGE TYPE CHANGE BASED ON THE SCREEN SIZE - WE WOULDN'T WANT AN OVERLY LARGE IMAGE ON A MOBILE WHICH WILL AFFECT LOAD TIME*/
+.perfume {
+    width: 100%; 
+    content:url("image-product-desktop.jpg"); 
+    transform: scale(1.015);
+}
+
+.textholder {
+    padding: 1.5rem; 
+    background-color: var(--white); 
+    height: max-content; 
+    flex: 1 1 0; 
+    width: 0; 
+    border-radius: 0 1rem 1rem 0; 
+    padding-bottom: 1.7rem; 
+}
+
+button {
+    display: block; 
+    box-sizing: border-box; 
+    text-align: center; 
+    margin-top: -1rem; 
+    width: 100%; 
+    background-color: var(--dark-cyan);
+    border: none; 
+    font-family: 'Montserrat', 'sans-serif';
+    font-size: 1rem; 
+    font-weight: 600; 
+    color: white; 
+    padding: 1rem; 
+    border-radius: 0.5rem;  
+
+}
+
+form {
+    margin-bottom: none; 
+}
+
+footer {
+    margin-top: 1rem; 
+    font-size: 11px;
+    text-align: center;
+  }
+   a {
+    color: hsl(228, 45%, 44%);
+  }
+
+}
